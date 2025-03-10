@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+app-bar {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+note-form {
+    display: block;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+note-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+note-form input,
+note-form textarea,
+note-form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+note-form input:focus,
+note-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+note-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+note-form button:hover {
+    background-color: #45a049;
+}
+
+notes-list {
+    display: block;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+note-item {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+note-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+note-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #4CAF50;
+}
+
+note-item p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    note-form {
+        padding: 15px;
+    }
+
+    notes-list {
+        padding: 10px;
+    }
+}
